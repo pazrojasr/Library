@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi libreria</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <script src="https://kit.fontawesome.com/b8cdc8451f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <section class="main_container">
+      <header>
+        <div class="logo">
+          <h1 class="logo-title">Mi libreria</h1>
+        </div>
+        <div class="library_log">
+          <h2>Registro de la biblioteca</h2>
+          <div class="total_books">
+            <h3>Recuento total de la biblioteca :</h3>
+            <span id="books_count"></span>
+          </div>
+          <div class="total_read">
+            <h3>Leidos:</h3>
+            <span id="read_b_count"></span>
+          </div>
+          <div class="not_read">
+            <h3>Sin leer:</h3>
+            <span id="not_read_b_count"></span>
+          </div>
+      </header>
+      <button class="new-book">
+        <span class="material-icons"> add </span>
+      </button>
+      <div class="row">
+        <div class="status_bar">
+          <div class="order">
+            <label for="order_by"
+              >order by:
+              <select name="order_by" id="order_by">
+                <option value="insertion_date" selected>Fecha de inserción</option>
+                <option value="publishing_date">Fecha de publicación</option>
+              </select>
+              <select name="order" id="order">
+                <option value="ascending">Asc</option>
+                <option value="descending" selected>Desc</option>
+              </select>
+            </label>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="empty_library_section">
+          <img
+            src="https://www.flaticon.com/svg/static/icons/svg/47/47612.svg"
+            alt="Blank rounded speech balloon"
+            title="Blank rounded speech balloon"
+            class="empty_library_img"
+          />
+          <span class="empty_library_text">Tu libreria esta vacia</span>
+        </div>
+      </div>
+    </section>
+    <section class="add_book_section">
+      <div class="new-book-form">
+        <h2 class="form_title">Agregar un nuevo libro</h2>
+        <span class="material-icons close-form"> close </span>
+        <label for="b-title"
+          >Titulo*
+          <input
+            class="form-control"
+            type="text"
+            name="book-title"
+            id="b-title"
+            placeholder="Title"
+          /><small class="err-msg">* El titulo del libro es obligatorio</small></label
+        >
+        <label for="b-author"
+          >Autor de libro*
+          <input
+            class="form-control"
+            type="text"
+            name="book-author"
+            id="b-author"
+            placeholder="Author"
+          /><small class="err-msg">* El autor del libro es obligatorio</small></label
+        >
+        <label for="b-nbr_of_pages"
+          >Numero de paginas*
+          <input
+            class="form-control"
+            type="number"
+            name="pages-count"
+            id="b-nbr_of_pages"
+            placeholder="Number of pages"
+            min="1"
+          /><small class="err-msg"
+            >* Numero de paginas es obligatorio</small
+          ></label
+        >
+        <label for="b-language"
+          >Idioma*
+          <input
+            class="form-control"
+            type="text"
+            name="book-language"
+            id="b-language"
+            placeholder="Language"
+          /><small class="err-msg">* El idioma del libro es obligatorio</small></label
+        >
+        <label for="b-publishing_date"
+          >Fecha de publicación *
+          <input
+            class="form-control"
+            type="date"
+            name="book-publishing-date"
+            id="b-publishing_date"
+          /><small class="err-msg"
+            >* La fecha de publicación es obligatoria</small
+          ></label
+        >
+        <label for="b-read_status"
+          >Estado del libro*
+          <select class="form-control" name="book-status" id="b-read_status">
+            <option value="null" disabled selected>
+              ¿Leiste este libro??
+            </option>
+            <option value="true">Sí, lo lei</option>
+            <option value="false">Estoy leyendo</option></select
+          ><small class="err-msg">* El estado del libro es obligatorio</small>
+        </label>
+
+        <div class="new-book-buttons">
+          <button class="btn add-book">Agregar</button>
+          <button class="btn clear">Limpiar</button>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+        <p>
+          Copyright ©
+          <script>
+            document.write(new Date().getFullYear())
+          </script>
+          pazrojasr
+        </p>
+        <a href="https://github.com/pazrojasr" target="_blank">
+          <i class="fab fa-github"></i
+        ></a>
+      </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>

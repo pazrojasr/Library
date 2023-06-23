@@ -1,0 +1,283 @@
+/* Resetear estilos por defecto */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fdf2f8;
+}
+
+.main_container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilos del encabezado */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo-title {
+  color: #ec4899;
+}
+
+.library_log {
+  text-align: right;
+  background-color: #f9a8d4;
+  padding: 10px;
+  border: 2px solid #be185d;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.total_books,
+.total_read,
+.not_read {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: normal;
+  color: #333;
+}
+
+
+/* Estilos del botón */
+.new-book {
+  background-color: #ec4899;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.new-book:hover {
+  background-color: #db2777;
+}
+
+/* Estilos de la barra de estado */
+.row {
+  margin-bottom: 20px;
+}
+
+.status_bar {
+  display: flex;
+  align-items: center;
+}
+
+.order {
+  margin-right: 20px;
+}
+
+/* Estilos de los colores de lectura */
+.read_color {
+  background-color: #fce7f3;
+}
+
+.Not_read_color {
+  background-color: #f9a8d4;
+}
+
+.read_color,
+.Not_read_color {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  display: inline-block;
+}
+
+/* Estilos de la sección de biblioteca vacía */
+.empty_library_section {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.empty_library_img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.empty_library_text {
+  color: #f472b6;
+}
+
+/* Estilos de la sección de agregar libro */
+.add_book_section {
+  display: none;
+  margin-top: 20px;
+}
+
+.new-book-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.form_title {
+  margin-bottom: 10px;
+  color: #ec4899;
+}
+
+.close-form {
+  float: right;
+  cursor: pointer;
+  color: #be185d;
+}
+
+.form-control {
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.err-msg {
+  color: #f472b6;
+  font-size: 12px;
+}
+
+.new-book-buttons {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.btn {
+  background-color: #ec4899;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.btn:hover {
+  background-color: #db2777;
+}
+
+.single_book {
+  text-align: center;
+  background-color: #f9a8d4;
+  padding: 10px;
+  border: 2px solid #be185d;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.single_book:hover {
+  transform: scale(1.1);
+}
+
+@keyframes scale-in-center {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* FOOTER */
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: var(--spacing-sm);
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.fa-github {
+  font-size: 24px;
+  color: #be185d;
+  transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+  transform: rotate(360deg) scale(1.2);
+}
+
+/* Estilos responsivos */
+
+@media (max-width: 768px) {
+  .main_container {
+    padding: 10px;
+  }
+
+  .logo-title {
+    font-size: 20px;
+  }
+
+  .library_log {
+    font-size: 18px;
+  }
+
+  .total_books,
+  .total_read,
+  .not_read {
+    font-size: 16px;
+  }
+
+  .new-book {
+    font-size: 14px;
+  }
+
+  .form_title {
+    font-size: 18px;
+  }
+
+  .form-control {
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+
+  .single_book {
+    font-size: 20px;
+  }
+}
